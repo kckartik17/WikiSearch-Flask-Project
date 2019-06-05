@@ -17,7 +17,6 @@ def index():
             summary="Too many results for searched keyword. Try specific from {}".format(e.options)
         except wikipedia.exceptions.PageError:
             summary="Error: Query doesn't match any results."
-        
         return render_template("summary.html",summary=summary,query=query)
 
 if __name__ == "__main__":
